@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rekap Kasus - WCC Palembang</title>
+<style>
+  :root{
+    --ink:#243047; --muted:#68758a; --paper:#fbfaf8; --card:#ffffff;
+    --plum:#6d4568; --rose:#c97887; --peach:#e7a27f; --gold:#d5ad62;
+    --sage:#78988a; --blue:#6f8fa8; --line:#eee8e4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:34px 22px 40px}
+  .eyebrow{color:var(--plum);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+  h1{font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);line-height:1.12;margin:10px 0 8px}
+  .intro{color:var(--muted);font-size:15px;line-height:1.6;margin:0;max-width:720px}
+  .rule{height:3px;width:64px;background:var(--rose);border-radius:10px;margin:22px 0 26px}
+  .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:22px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 5px 18px rgba(50,35,45,.035)}
+  .stat.primary{background:var(--plum);color:white;border-color:var(--plum)}
+  .stat .label{font-size:12px;letter-spacing:.7px;text-transform:uppercase;opacity:.78;font-weight:700}
+  .stat .number{font-family:Georgia,serif;font-size:42px;font-weight:700;margin-top:7px;line-height:1}
+  .stat .sub{font-size:12px;margin-top:8px;opacity:.8}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:16px;box-shadow:0 5px 18px rgba(50,35,45,.035)}
+  .panel h2{font-family:Georgia,serif;font-size:22px;margin:0 0 5px}
+  .hint{color:var(--muted);font-size:13px;margin:0 0 20px;line-height:1.5}
+  .bar-list{display:grid;gap:16px}
+  .bar-head{display:flex;justify-content:space-between;gap:12px;font-size:14px;margin-bottom:7px}
+  .bar-head strong{font-weight:700}
+  .track{height:12px;background:#f1eeec;border-radius:20px;overflow:hidden}
+  .fill{height:100%;border-radius:20px}
+  .c1{background:var(--plum)} .c2{background:var(--rose)} .c3{background:var(--peach)}
+  .c4{background:var(--gold)} .c5{background:var(--sage)} .c6{background:var(--blue)}
+  .peak{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#f7f0f2;border:1px solid #f0e2e6;border-radius:14px;padding:18px 20px}
+  .peak .month{font-family:Georgia,serif;font-size:27px;color:var(--plum);font-weight:700}
+  .peak .count{font-size:30px;font-weight:700;color:var(--plum)}
+  .peak p{margin:4px 0 0;color:var(--muted);font-size:13px}
+  .note{font-size:13px;color:var(--muted);line-height:1.6;margin:18px 2px 0}
+  footer{border-top:1px solid var(--line);margin-top:28px;padding-top:16px;color:#8790a0;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+  @media(min-width:700px){.stats{grid-template-columns:1fr 1fr}.stat{padding:24px}.panel{padding:28px}.bar-list{gap:19px}}
+  @media(max-width:420px){.wrap{padding:25px 15px}.stat .number{font-size:36px}.panel{padding:18px}.peak{padding:15px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow">WCC Palembang · Data layanan</div>
+  <h1>Rekap Sementara Kasus Kekerasan</h1>
+  <p class="intro">Gambaran jumlah kasus yang tercatat berdasarkan kategori kekerasan. Data ini merupakan rekap sementara dan dapat diperbarui sesuai pencatatan layanan.</p>
+  <div class="rule"></div>
+
+  <section class="stats" aria-label="Ringkasan data">
+    <div class="stat primary">
+      <div class="label">Total kasus tercatat</div>
+      <div class="number">104</div>
+      <div class="sub">Jumlah kasus dalam rekap sementara</div>
+    </div>
+    <div class="stat">
+      <div class="label">Bulan dengan kasus tertinggi</div>
+      <div class="number">19</div>
+      <div class="sub">Kasus tercatat pada bulan April</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Kasus berdasarkan kategori</h2>
+    <p class="hint">Jumlah kasus pada setiap kategori. Panjang batang menunjukkan perbandingan jumlah kasus.</p>
+    <div class="bar-list">
+      <div>
+        <div class="bar-head"><strong>KDRT</strong><span>45 kasus</span></div>
+        <div class="track"><div class="fill c1" style="width:100%"></div></div>
+      </div>
+      <div>
+        <div class="bar-head"><strong>KDP</strong><span>18 kasus</span></div>
+        <div class="track"><div class="fill c2" style="width:40%"></div></div>
+      </div>
+      <div>
+        <div class="bar-head"><strong>Trafficking</strong><span>13 kasus</span></div>
+        <div class="track"><div class="fill c3" style="width:28.89%"></div></div>
+      </div>
+      <div>
+        <div class="bar-head"><strong>Kekerasan lainnya</strong><span>12 kasus</span></div>
+        <div class="track"><div class="fill c4" style="width:26.67%"></div></div>
+      </div>
+      <div>
+        <div class="bar-head"><strong>Perkosaan</strong><span>10 kasus</span></div>
+        <div class="track"><div class="fill c5" style="width:22.22%"></div></div>
+      </div>
+      <div>
+        <div class="bar-head"><strong>Pelecehan seksual</strong><span>6 kasus</span></div>
+        <div class="track"><div class="fill c6" style="width:13.33%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Sorotan bulanan</h2>
+    <p class="hint">Bulan dengan jumlah kasus tercatat paling tinggi dalam rekap ini.</p>
+    <div class="peak">
+      <div>
+        <div class="month">April</div>
+        <p>Jumlah kasus tertinggi</p>
+      </div>
+      <div class="count">19 <span style="font-size:13px;font-weight:400">kasus</span></div>
+    </div>
+  </section>
+
+  <p class="note"><strong>Catatan:</strong> Angka menunjukkan jumlah kasus yang tercatat, bukan jumlah seluruh penyintas unik. Satu penyintas dapat berkaitan dengan lebih dari satu pencatatan kasus. Data bersifat sementara.</p>
+  <footer>WCC Palembang · Rekap sementara</footer>
+</main>
+</body>
+</html>
